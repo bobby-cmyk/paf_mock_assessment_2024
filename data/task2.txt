@@ -2,7 +2,7 @@ Write your Task 2 answers in this file
 
 Task 2.1
 
-mongoimport --authenticationDatabase=admin --uri=mongodb://mongo:QwkmvMljvGnVZtaCDhdeyNjwUSJWTWpE@junction.proxy.rlwy.net:10576 -d bedandbreakfast -c listings_and_reviews --type=json --file=listings.json
+mongoimport --authenticationDatabase=admin --uri=${MONGODB_URI} -d bedandbreakfast -c listings_and_reviews --type=json --file=listings.json
 
 Task 2.2
 
@@ -71,4 +71,4 @@ db.listings.aggregate([
 
 Task 2.5
 
-mongoexport --authenticationDatabase=admin --uri=mongodb://mongo:QwkmvMljvGnVZtaCDhdeyNjwUSJWTWpE@junction.proxy.rlwy.net:10576 --db bedandbreakfast --collection reviews --type=csv --out reviews.csv --fields date,listing_id,reviewer_name,comments
+mongoexport --authenticationDatabase=admin --uri=${MONGODB_URI} --db bedandbreakfast --collection reviews --type=csv --out reviews.csv --fields date,listing_id,reviewer_name,comments

@@ -35,7 +35,7 @@ SHOW VARIABLES LIKE 'local_infile';
 LOAD DATA LOCAL INFILE  
 '/Users/aikenong/vttp/paf_assessment_template/data/users.csv'
 INTO TABLE users 
-FIELDS TERMINATED BY ',' 
+FIELDS TERMINATED BY ', ' 
 ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
 IGNORE 1 ROWS
